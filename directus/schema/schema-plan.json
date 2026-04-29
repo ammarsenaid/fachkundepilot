@@ -64,7 +64,6 @@
     { "from": "vocabulary_translations.vocabulary_item_id", "to": "vocabulary_items.id", "type": "many_to_one" },
     { "from": "faq_translations.faq_item_id", "to": "faq_items.id", "type": "many_to_one" },
     { "from": "pricing_plan_translations.pricing_plan_id", "to": "pricing_plans.id", "type": "many_to_one" },
-    { "from": "student_profiles.directus_user_id", "to": "directus_users.id", "type": "many_to_one" },
     { "from": "student_profiles.preferred_language_id", "to": "languages.id", "type": "many_to_one" },
     { "from": "learning_progress.student_id", "to": "student_profiles.id", "type": "many_to_one" }
   ],
