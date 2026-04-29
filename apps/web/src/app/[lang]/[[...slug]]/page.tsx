@@ -25,7 +25,9 @@ const homeLabels: Record<SupportedLanguage, {
   secondaryCta: string;
   dashboardTag: string;
   dashboardTitle: string;
+  dashboardItems: [string, string, string, string];
   benefits: [string, string, string];
+  trustItems: [string, string, string];
   problemTitle: string;
   solutionTitle: string;
   pathTitle: string;
@@ -40,7 +42,9 @@ const homeLabels: Record<SupportedLanguage, {
     secondaryCta: "Lernmaterial ansehen",
     dashboardTag: "Lern-Dashboard",
     dashboardTitle: "Dein Prüfungspfad auf einen Blick",
+    dashboardItems: ["Recht & Vorschriften", "Betriebsführung", "Kaufmännisches Rechnen", "Prüfungsfragen trainieren"],
     benefits: ["Mehrsprachig lernen", "Prüfungsorientierte Inhalte", "Schritt-für-Schritt Fortschritt"],
+    trustItems: ["Für Taxi- & Mietwagenprüfung", "Deutsch als Prüfungssprache", "Lernen in 3 Sprachen"],
     problemTitle: "Die Herausforderung",
     solutionTitle: "Unsere Lösung",
     pathTitle: "Dein Lernpfad",
@@ -55,7 +59,9 @@ const homeLabels: Record<SupportedLanguage, {
     secondaryCta: "View materials",
     dashboardTag: "Learning dashboard",
     dashboardTitle: "Your exam path at a glance",
+    dashboardItems: ["Law & regulations", "Business operations", "Commercial math", "Exam question training"],
     benefits: ["Learn multilingual", "Exam-oriented content", "Step-by-step progress"],
+    trustItems: ["Built for taxi & rental exam", "German exam language focus", "Learn in 3 languages"],
     problemTitle: "The challenge",
     solutionTitle: "Our solution",
     pathTitle: "Your learning path",
@@ -70,7 +76,9 @@ const homeLabels: Record<SupportedLanguage, {
     secondaryCta: "عرض المواد",
     dashboardTag: "لوحة التعلّم",
     dashboardTitle: "مسارك للاختبار بنظرة سريعة",
+    dashboardItems: ["القانون واللوائح", "تشغيل الأعمال", "الحساب التجاري", "تدريب أسئلة الاختبار"],
     benefits: ["تعلّم متعدد اللغات", "محتوى موجّه للاختبار", "تقدّم خطوة بخطوة"],
+    trustItems: ["مصمم لاختبار التاكسي والتأجير", "تركيز على لغة الاختبار الألمانية", "تعلّم بثلاث لغات"],
     problemTitle: "التحدي",
     solutionTitle: "حلّنا",
     pathTitle: "مسار التعلّم",
@@ -179,12 +187,7 @@ export default async function PublicLocalizedPage({ params }: { params: Promise<
                 <p className="text-xs uppercase tracking-[0.14em] text-slate-300">{labels.dashboardTag}</p>
                 <h2 className="mt-3 text-2xl font-semibold">{labels.dashboardTitle}</h2>
                 <div className="mt-6 space-y-3">
-                  {[
-                    "Recht & Vorschriften",
-                    "Betriebsführung",
-                    "Kaufmännisches Rechnen",
-                    "Prüfungsfragen trainieren",
-                  ].map((item, index) => (
+                  {labels.dashboardItems.map((item, index) => (
                     <div key={item} className="flex items-center justify-between rounded-2xl bg-white/10 px-4 py-3">
                       <p className="text-sm">{item}</p>
                       <span className="text-xs text-amber-300">{20 + index * 20}%</span>
@@ -192,6 +195,12 @@ export default async function PublicLocalizedPage({ params }: { params: Promise<
                   ))}
                 </div>
               </aside>
+            </section>
+
+            <section className="mt-6 grid gap-3 rounded-3xl border border-white/70 bg-white/80 p-4 shadow-sm md:grid-cols-3 md:p-5">
+              {labels.trustItems.map((item) => (
+                <p key={item} className="rounded-2xl bg-slate-50 px-4 py-3 text-center text-sm font-medium text-slate-700">{item}</p>
+              ))}
             </section>
 
             <section className="mt-8 grid gap-4 md:grid-cols-3">
@@ -228,9 +237,9 @@ export default async function PublicLocalizedPage({ params }: { params: Promise<
             <section className="mt-12 grid gap-6 md:grid-cols-2">
               <article className="rounded-3xl border border-white/70 bg-white/85 p-7 shadow-sm">
                 <h2 className="text-2xl font-semibold text-slate-900">{labels.multiTitle}</h2>
-                <p className="mt-3 text-slate-600">Deutsch, Englisch und Arabisch helfen beim Verstehen. Trainiert wird gezielt für die offizielle Prüfungssprache Deutsch.</p>
+                <p className="mt-3 text-slate-600">{lang === "de" ? "Deutsch, Englisch und Arabisch helfen beim Verstehen. Trainiert wird gezielt für die offizielle Prüfungssprache Deutsch." : lang === "en" ? "German, English, and Arabic help learners understand each topic. Training stays focused on German as the official exam language." : "الألمانية والإنجليزية والعربية تساعد على الفهم. يبقى التدريب موجهاً للغة الألمانية كلغة الاختبار الرسمية."}</p>
               </article>
-              <article className="rounded-3xl border border-[var(--accent)]/40 bg-[var(--accent)]/10 p-7 shadow-sm">
+              <article className="rounded-3xl border border-[var(--accent)]/40 bg-[linear-gradient(145deg,rgba(245,200,75,0.22),rgba(255,255,255,0.88))] p-7 shadow-[0_16px_44px_rgba(15,23,42,0.08)]">
                 <h2 className="text-2xl font-semibold text-slate-900">{finalSection?.heading || labels.finalTitle}</h2>
                 <p className="mt-3 text-slate-700">{finalSection?.body || "Starte mit einem klaren Plan und übe bis zur sicheren Prüfungsteilnahme."}</p>
                 <div className="mt-5">
