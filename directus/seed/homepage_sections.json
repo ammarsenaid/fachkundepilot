@@ -1,0 +1,12 @@
+{
+  "page_sections": [
+    { "id": "sec_hero", "page_id": "page_home", "section_key": "hero", "section_type": "hero", "sort_order": 1, "is_visible": true, "status": "published" },
+    { "id": "sec_problem", "page_id": "page_home", "section_key": "problem", "section_type": "content", "sort_order": 2, "is_visible": true, "status": "published" },
+    { "id": "sec_solution", "page_id": "page_home", "section_key": "solution", "section_type": "content", "sort_order": 3, "is_visible": true, "status": "published" },
+    { "id": "sec_features", "page_id": "page_home", "section_key": "features", "section_type": "cards", "sort_order": 4, "is_visible": true, "status": "published" },
+    { "id": "sec_cta", "page_id": "page_home", "section_key": "final_cta", "section_type": "cta", "sort_order": 5, "is_visible": true, "status": "published" }
+  ],
+  "section_translations": [
+    { "id": "sec_hero_de", "section_id": "sec_hero", "language_id": "lang_de", "heading": "Verstehen in deiner Sprache. Bestehen auf Deutsch.", "subheading": "Mehrsprachige Lernhilfe für die Fachkundeprüfung.", "body": "Die offizielle Prüfung ist auf Deutsch. Wir helfen dir beim Verstehen und Üben.", "button_text": "Jetzt starten", "button_url": "/de", "image_alt": "Lernende in einem Kurs", "content_json": {}, "is_published": true, "is_complete": true }
+  ]
+}

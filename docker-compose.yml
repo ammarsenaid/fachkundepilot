@@ -1,0 +1,112 @@
+services:
+  web:
+    image: node:22-alpine
+    container_name: fachkundepilot-web
+    working_dir: /app
+    command: sh -c "npm install && npm run dev -w @fachkundepilot/web"
+    env_file:
+      - .env
+      - ./apps/web/.env
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+    volumes:
+      - ./:/app
+      - web_node_modules:/app/node_modules
+    expose:
+      - "3000"
+    depends_on:
+      - directus
+    restart: unless-stopped
+    networks:
+      - app_net
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: fachkundepilot-postgres
+    env_file:
+      - .env
+      - ./directus/.env
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+    networks:
+      - app_net
+
+  directus:
+    image: directus/directus:11.1.0
+    container_name: fachkundepilot-directus
+    env_file:
+      - .env
+      - ./directus/.env
+    environment:
+      - KEY=${DIRECTUS_KEY}
+      - SECRET=${DIRECTUS_SECRET}
+      - DB_CLIENT=pg
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_DATABASE=${POSTGRES_DB}
+      - DB_USER=${POSTGRES_USER}
+      - DB_PASSWORD=${POSTGRES_PASSWORD}
+      - ADMIN_EMAIL=${DIRECTUS_ADMIN_EMAIL}
+      - ADMIN_PASSWORD=${DIRECTUS_ADMIN_PASSWORD}
+      - WEBSOCKETS_ENABLED=true
+      - CORS_ENABLED=true
+      - PUBLIC_URL=${DIRECTUS_PUBLIC_URL}
+      - STORAGE_LOCATIONS=local
+      - STORAGE_LOCAL_DRIVER=local
+      - STORAGE_LOCAL_ROOT=/directus/uploads
+    volumes:
+      - directus_uploads:/directus/uploads
+    expose:
+      - "8055"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:8055/server/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 8
+    restart: unless-stopped
+    networks:
+      - app_net
+
+  caddy:
+    image: caddy:2.9-alpine
+    container_name: fachkundepilot-caddy
+    ports:
+      - "80:80"
+      - "443:443"
+    env_file:
+      - .env
+    volumes:
+      - ./infra/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - web
+      - directus
+    restart: unless-stopped
+    networks:
+      - app_net
+
+volumes:
+  postgres_data:
+  directus_uploads:
+  caddy_data:
+  caddy_config:
+  web_node_modules:
+
+networks:
+  app_net:
+    driver: bridge

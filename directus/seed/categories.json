@@ -1,0 +1,12 @@
+{
+  "categories": [
+    { "id": "cat_recht", "category_key": "recht", "status": "published", "sort_order": 1, "icon": "scale", "color": "#0B3A75" },
+    { "id": "cat_betrieb", "category_key": "betrieb", "status": "published", "sort_order": 2, "icon": "briefcase", "color": "#0B3A75" },
+    { "id": "cat_rechnen", "category_key": "rechnen", "status": "published", "sort_order": 3, "icon": "calculator", "color": "#F5C84B" }
+  ],
+  "category_translations": [
+    { "id": "cat_tr_recht_de", "category_id": "cat_recht", "language_id": "lang_de", "name": "Recht", "description": "Grundlagen zu Regeln und Pflichten.", "slug": "recht", "is_published": true, "is_complete": true },
+    { "id": "cat_tr_recht_en", "category_id": "cat_recht", "language_id": "lang_en", "name": "Law", "description": "Basics of rules and obligations.", "slug": "law", "is_published": true, "is_complete": true },
+    { "id": "cat_tr_recht_ar", "category_id": "cat_recht", "language_id": "lang_ar", "name": "القانون", "description": "أساسيات القواعد والالتزامات.", "slug": "al-qanun", "is_published": true, "is_complete": true }
+  ]
+}

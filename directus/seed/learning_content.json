@@ -1,0 +1,359 @@
+{
+  "lessons": [
+    {
+      "id": "lesson_1",
+      "category_id": "cat_recht",
+      "lesson_key": "pflichten-fahrer",
+      "difficulty": "easy",
+      "estimated_minutes": 15,
+      "sort_order": 1,
+      "status": "published"
+    },
+    {
+      "id": "lesson_2",
+      "category_id": "cat_betrieb",
+      "lesson_key": "kundenservice-grundlagen",
+      "difficulty": "easy",
+      "estimated_minutes": 12,
+      "sort_order": 2,
+      "status": "published"
+    }
+  ],
+  "lesson_translations": [
+    {
+      "id": "lesson_1_de",
+      "lesson_id": "lesson_1",
+      "language_id": "lang_de",
+      "title": "Pflichten als Fahrer",
+      "slug": "pflichten-als-fahrer",
+      "summary": "Welche Grundpflichten im Alltag wichtig sind.",
+      "body": "Placeholder-Lektion mit einfachen Beispielen.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "lesson_2_de",
+      "lesson_id": "lesson_2",
+      "language_id": "lang_de",
+      "title": "Kundenservice Grundlagen",
+      "slug": "kundenservice-grundlagen",
+      "summary": "Freundlicher und sicherer Umgang mit Fahrgästen.",
+      "body": "Placeholder-Lektion mit Basisregeln.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "lesson_1_en",
+      "lesson_id": "lesson_1",
+      "language_id": "lang_en",
+      "title": "Driver Responsibilities",
+      "slug": "driver-responsibilities",
+      "summary": "Important daily duties for drivers.",
+      "body": "Simple placeholder lesson with short examples.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "lesson_1_ar",
+      "lesson_id": "lesson_1",
+      "language_id": "lang_ar",
+      "title": "واجبات السائق",
+      "slug": "wajibat-al-saeiq",
+      "summary": "الواجبات اليومية الأساسية للسائق.",
+      "body": "درس تجريبي بسيط بأمثلة قصيرة.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "lesson_2_en",
+      "lesson_id": "lesson_2",
+      "language_id": "lang_en",
+      "title": "Customer Service Basics",
+      "slug": "customer-service-basics",
+      "summary": "Safe and friendly communication with passengers.",
+      "body": "Simple placeholder lesson with practical tips.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "lesson_2_ar",
+      "lesson_id": "lesson_2",
+      "language_id": "lang_ar",
+      "title": "أساسيات خدمة العملاء",
+      "slug": "asasyat-khidmat-al-umalaa",
+      "summary": "التعامل الآمن والودود مع الركاب.",
+      "body": "درس تجريبي بسيط مع نصائح عملية.",
+      "is_published": true,
+      "is_complete": true
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "flash_1",
+      "category_id": "cat_recht",
+      "difficulty": "easy",
+      "status": "published",
+      "sort_order": 1
+    },
+    {
+      "id": "flash_2",
+      "category_id": "cat_rechnen",
+      "difficulty": "easy",
+      "status": "published",
+      "sort_order": 2
+    }
+  ],
+  "flashcard_translations": [
+    {
+      "id": "flash_1_de",
+      "flashcard_id": "flash_1",
+      "language_id": "lang_de",
+      "front_text": "Was bedeutet Beförderungspflicht?",
+      "back_text": "Du musst im Pflichtgebiet zulässige Fahrten durchführen.",
+      "explanation": "Einfaches Platzhalter-Beispiel.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "flash_2_de",
+      "flashcard_id": "flash_2",
+      "language_id": "lang_de",
+      "front_text": "Was ist Grundpreis?",
+      "back_text": "Der Preis, der beim Fahrtstart gilt.",
+      "explanation": "Einfaches Platzhalter-Beispiel.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "flash_1_en",
+      "flashcard_id": "flash_1",
+      "language_id": "lang_en",
+      "front_text": "What does transport duty mean?",
+      "back_text": "You must take permitted rides in the required area.",
+      "explanation": "Simple placeholder example.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "flash_1_ar",
+      "flashcard_id": "flash_1",
+      "language_id": "lang_ar",
+      "front_text": "ماذا تعني واجب النقل؟",
+      "back_text": "يجب قبول الرحلات المسموح بها داخل منطقة الالتزام.",
+      "explanation": "مثال تجريبي بسيط.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "flash_2_en",
+      "flashcard_id": "flash_2",
+      "language_id": "lang_en",
+      "front_text": "What is the base fare?",
+      "back_text": "The starting fare at the beginning of the trip.",
+      "explanation": "Simple placeholder example.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "flash_2_ar",
+      "flashcard_id": "flash_2",
+      "language_id": "lang_ar",
+      "front_text": "ما هو التعرفة الأساسية؟",
+      "back_text": "السعر الذي يبدأ عند انطلاق الرحلة.",
+      "explanation": "مثال تجريبي بسيط.",
+      "is_published": true,
+      "is_complete": true
+    }
+  ],
+  "questions": [
+    {
+      "id": "q_1",
+      "category_id": "cat_recht",
+      "question_type": "multiple_choice",
+      "difficulty": "easy",
+      "points": 1,
+      "status": "published",
+      "sort_order": 1
+    },
+    {
+      "id": "q_2",
+      "category_id": "cat_betrieb",
+      "question_type": "open_question",
+      "difficulty": "easy",
+      "points": 1,
+      "status": "published",
+      "sort_order": 2
+    }
+  ],
+  "question_translations": [
+    {
+      "id": "q_1_de",
+      "question_id": "q_1",
+      "language_id": "lang_de",
+      "question_text": "Wann muss ein Fahrgast freundlich informiert werden?",
+      "explanation": "Vor allem bei Routen- oder Preisfragen.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "q_2_de",
+      "question_id": "q_2",
+      "language_id": "lang_de",
+      "question_text": "Nenne zwei Merkmale guter Kommunikation mit Fahrgästen.",
+      "explanation": "Höflichkeit und klare Sprache.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "q_1_en",
+      "question_id": "q_1",
+      "language_id": "lang_en",
+      "question_text": "When should a passenger be informed politely?",
+      "explanation": "Especially for route or fare questions.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "q_1_ar",
+      "question_id": "q_1",
+      "language_id": "lang_ar",
+      "question_text": "متى يجب إبلاغ الراكب بطريقة مهذبة؟",
+      "explanation": "خصوصًا عند أسئلة الطريق أو السعر.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "q_2_en",
+      "question_id": "q_2",
+      "language_id": "lang_en",
+      "question_text": "Name two signs of good communication with passengers.",
+      "explanation": "Politeness and clear language.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "q_2_ar",
+      "question_id": "q_2",
+      "language_id": "lang_ar",
+      "question_text": "اذكر علامتين على التواصل الجيد مع الركاب.",
+      "explanation": "اللباقة والوضوح.",
+      "is_published": true,
+      "is_complete": true
+    }
+  ],
+  "question_options": [
+    {
+      "id": "q1_opt_1",
+      "question_id": "q_1",
+      "is_correct": true,
+      "sort_order": 1
+    },
+    {
+      "id": "q1_opt_2",
+      "question_id": "q_1",
+      "is_correct": false,
+      "sort_order": 2
+    }
+  ],
+  "question_option_translations": [
+    {
+      "id": "q1_opt_1_de",
+      "question_option_id": "q1_opt_1",
+      "language_id": "lang_de",
+      "option_text": "Wenn Informationen für die Fahrt wichtig sind.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "q1_opt_2_de",
+      "question_option_id": "q1_opt_2",
+      "language_id": "lang_de",
+      "option_text": "Nur am Fahrtende.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "q1_opt_1_en",
+      "question_option_id": "q1_opt_1",
+      "language_id": "lang_en",
+      "option_text": "When information is important for the trip.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "q1_opt_1_ar",
+      "question_option_id": "q1_opt_1",
+      "language_id": "lang_ar",
+      "option_text": "عندما تكون المعلومات مهمة للرحلة.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "q1_opt_2_en",
+      "question_option_id": "q1_opt_2",
+      "language_id": "lang_en",
+      "option_text": "Only at the end of the trip.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "q1_opt_2_ar",
+      "question_option_id": "q1_opt_2",
+      "language_id": "lang_ar",
+      "option_text": "فقط في نهاية الرحلة.",
+      "is_published": true,
+      "is_complete": true
+    }
+  ],
+  "calculation_tasks": [
+    {
+      "id": "calc_1",
+      "category_id": "cat_rechnen",
+      "difficulty": "easy",
+      "points": 2,
+      "status": "published",
+      "sort_order": 1
+    }
+  ],
+  "calculation_task_translations": [
+    {
+      "id": "calc_1_de",
+      "calculation_task_id": "calc_1",
+      "language_id": "lang_de",
+      "task_text": "Eine Fahrt hat 8 km. Grundpreis 4,00 €, Kilometerpreis 2,00 €. Wie hoch ist der Fahrpreis ohne Zuschläge?",
+      "given_values": "{\"base\":4,\"km\":8,\"rate\":2}",
+      "correct_result": "20.00",
+      "formula": "base + km * rate",
+      "step_by_step_solution": "4 + 8×2 = 20",
+      "common_mistake": "Grundpreis vergessen",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "calc_1_en",
+      "calculation_task_id": "calc_1",
+      "language_id": "lang_en",
+      "task_text": "A trip is 8 km. Base fare is €4.00 and per-km fare is €2.00. What is the total fare without surcharges?",
+      "given_values": "{\"base\":4,\"km\":8,\"rate\":2}",
+      "correct_result": "20.00",
+      "formula": "base + km * rate",
+      "step_by_step_solution": "4 + 8×2 = 20",
+      "common_mistake": "Forgetting the base fare",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "calc_1_ar",
+      "calculation_task_id": "calc_1",
+      "language_id": "lang_ar",
+      "task_text": "رحلة طولها 8 كم. التعرفة الأساسية 4.00€ وسعر الكيلومتر 2.00€. ما السعر الإجمالي بدون إضافات؟",
+      "given_values": "{\"base\":4,\"km\":8,\"rate\":2}",
+      "correct_result": "20.00",
+      "formula": "base + km * rate",
+      "step_by_step_solution": "4 + 8×2 = 20",
+      "common_mistake": "نسيان التعرفة الأساسية",
+      "is_published": true,
+      "is_complete": true
+    }
+  ]
+}
