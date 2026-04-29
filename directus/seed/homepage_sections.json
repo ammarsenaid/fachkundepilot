@@ -1,12 +1,132 @@
 {
   "page_sections": [
-    { "id": "sec_hero", "page_id": "page_home", "section_key": "hero", "section_type": "hero", "sort_order": 1, "is_visible": true, "status": "published" },
-    { "id": "sec_problem", "page_id": "page_home", "section_key": "problem", "section_type": "content", "sort_order": 2, "is_visible": true, "status": "published" },
-    { "id": "sec_solution", "page_id": "page_home", "section_key": "solution", "section_type": "content", "sort_order": 3, "is_visible": true, "status": "published" },
-    { "id": "sec_features", "page_id": "page_home", "section_key": "features", "section_type": "cards", "sort_order": 4, "is_visible": true, "status": "published" },
-    { "id": "sec_cta", "page_id": "page_home", "section_key": "final_cta", "section_type": "cta", "sort_order": 5, "is_visible": true, "status": "published" }
+    {
+      "id": "sec_hero",
+      "page_id": "page_home",
+      "section_key": "hero",
+      "section_type": "hero",
+      "sort_order": 1,
+      "is_visible": true,
+      "status": "published"
+    },
+    {
+      "id": "sec_problem",
+      "page_id": "page_home",
+      "section_key": "problem",
+      "section_type": "content",
+      "sort_order": 2,
+      "is_visible": true,
+      "status": "published"
+    },
+    {
+      "id": "sec_solution",
+      "page_id": "page_home",
+      "section_key": "solution",
+      "section_type": "content",
+      "sort_order": 3,
+      "is_visible": true,
+      "status": "published"
+    },
+    {
+      "id": "sec_features",
+      "page_id": "page_home",
+      "section_key": "features",
+      "section_type": "cards",
+      "sort_order": 4,
+      "is_visible": true,
+      "status": "published"
+    },
+    {
+      "id": "sec_cta",
+      "page_id": "page_home",
+      "section_key": "final_cta",
+      "section_type": "cta",
+      "sort_order": 5,
+      "is_visible": true,
+      "status": "published"
+    }
   ],
   "section_translations": [
-    { "id": "sec_hero_de", "section_id": "sec_hero", "language_id": "lang_de", "heading": "Verstehen in deiner Sprache. Bestehen auf Deutsch.", "subheading": "Mehrsprachige Lernhilfe für die Fachkundeprüfung.", "body": "Die offizielle Prüfung ist auf Deutsch. Wir helfen dir beim Verstehen und Üben.", "button_text": "Jetzt starten", "button_url": "/de", "image_alt": "Lernende in einem Kurs", "content_json": {}, "is_published": true, "is_complete": true }
+    {
+      "id": "sec_hero_de",
+      "section_id": "sec_hero",
+      "language_id": "lang_de",
+      "heading": "Fachkundeprüfung verstehen. Sicherer auf Deutsch bestehen.",
+      "subheading": "Lerne Recht, Betrieb und Rechnen Schritt für Schritt – mit klaren Erklärungen, Übungen, Karteikarten und Unterstützung in Deutsch, Englisch und Arabisch.",
+      "body": "Die offizielle Fachkundeprüfung ist auf Deutsch. FachkundePilot hilft dir, schwierige Inhalte zuerst verständlich zu lernen und danach gezielt auf Deutsch zu trainieren.",
+      "button_text": "Kostenlos starten",
+      "button_url": "/de/lernen",
+      "image_alt": "Lernende bereiten sich digital auf die Fachkundeprüfung vor",
+      "content_json": {},
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "sec_problem_de",
+      "section_id": "sec_problem",
+      "language_id": "lang_de",
+      "heading": "Viele Lernende verstehen die Themen, aber nicht immer die Prüfungssprache.",
+      "subheading": "Lange Sätze, rechtliche Begriffe und Rechenaufgaben machen die Vorbereitung schwer – auch wenn praktische Erfahrung schon da ist.",
+      "body": "Mit FachkundePilot trainierst du Fachbegriffe, typische Fragestellungen und Rechenwege in kleinen, klaren Einheiten.",
+      "button_text": null,
+      "button_url": null,
+      "image_alt": null,
+      "content_json": {},
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "sec_solution_de",
+      "section_id": "sec_solution",
+      "language_id": "lang_de",
+      "heading": "Die Lösung: klar, strukturiert, mehrsprachig.",
+      "subheading": "Wir zerlegen schwierige Inhalte in einfache Lektionen mit Beispielen, Verständnisfragen und kurzen Wiederholungen.",
+      "body": "Du lernst mit Unterstützung in deiner Sprache und baust gleichzeitig sicheres Prüfungsdeutsch auf.",
+      "button_text": null,
+      "button_url": null,
+      "image_alt": null,
+      "content_json": {},
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "sec_features_de",
+      "section_id": "sec_features",
+      "language_id": "lang_de",
+      "heading": "Alles Wichtige für deine Vorbereitung an einem Ort.",
+      "subheading": "Von Recht bis Rechnen: übe systematisch statt chaotisch.",
+      "body": "",
+      "button_text": null,
+      "button_url": null,
+      "image_alt": null,
+      "content_json": {
+        "items": [
+          "Deutsch als Prüfungssprache im Fokus",
+          "Erklärhilfe auf Englisch und Arabisch",
+          "Recht, Betrieb und Rechnen strukturiert lernen",
+          "Karteikarten für Fachbegriffe und Regeln",
+          "Übungsfragen mit klaren Erklärungen",
+          "Rechenaufgaben mit Schritt-für-Schritt-Lösungen",
+          "Wortschatzhilfe für schwierige Begriffe",
+          "Lernpfad vom Einstieg bis zur Probeprüfung"
+        ]
+      },
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "sec_cta_de",
+      "section_id": "sec_cta",
+      "language_id": "lang_de",
+      "heading": "Starte jetzt mit deiner Vorbereitung.",
+      "subheading": "Lerne in deinem Tempo und trainiere gezielt auf die deutsche Prüfungssituation.",
+      "body": "",
+      "button_text": "Prüfung vorbereiten",
+      "button_url": "/de/demo",
+      "image_alt": null,
+      "content_json": {},
+      "is_published": true,
+      "is_complete": true
+    }
   ]
 }
