@@ -17,9 +17,9 @@ export function LanguageSwitcher({ currentPageKey }: { currentPageKey: PublicPag
   }, [pathname]);
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-1 rounded-xl border border-slate-200 bg-white p-1 shadow-sm">
       {supportedLanguages.map((lang) => (
-        <a key={lang} href={buildLocalizedPath(lang, currentPageKey)} className="rounded border px-2 py-1 text-xs uppercase">
+        <a key={lang} href={buildLocalizedPath(lang, currentPageKey)} className="rounded-lg px-2 py-1 text-[11px] font-semibold uppercase text-slate-600 hover:bg-slate-100 hover:text-slate-900">
           {lang}
         </a>
       ))}
