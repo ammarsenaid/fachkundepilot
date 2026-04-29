@@ -1,5 +1,9 @@
 # Changelog
 
+## Codex PR connectivity test
+
+- Test commit to verify Codex PR creation flow.
+
 ## 2026-04-29 — Phase 15 completed
 
 ### Testing / Validation
