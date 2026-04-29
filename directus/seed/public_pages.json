@@ -1,0 +1,15 @@
+{
+  "pages": [
+    { "id": "page_home", "page_key": "home", "internal_name": "Homepage", "status": "published", "sort_order": 1 },
+    { "id": "page_exam_explained", "page_key": "exam_explained", "internal_name": "Pruefung erklaert", "status": "published", "sort_order": 2 },
+    { "id": "page_material", "page_key": "learning_material", "internal_name": "Lernmaterial", "status": "published", "sort_order": 3 },
+    { "id": "page_pricing", "page_key": "pricing", "internal_name": "Preise", "status": "published", "sort_order": 4 },
+    { "id": "page_faq", "page_key": "faq", "internal_name": "FAQ", "status": "published", "sort_order": 5 },
+    { "id": "page_contact", "page_key": "contact", "internal_name": "Kontakt", "status": "published", "sort_order": 6 }
+  ],
+  "page_translations": [
+    { "id": "p_home_de", "page_id": "page_home", "language_id": "lang_de", "slug": "", "title": "FachkundePilot", "seo_title": "FachkundePilot | Fachkunde lernen", "seo_description": "Verstehen in deiner Sprache. Bestehen auf Deutsch.", "og_title": "FachkundePilot", "og_description": "Mehrsprachig lernen für die Fachkundeprüfung.", "content_summary": "Startseite Übersicht", "is_published": true, "is_complete": true },
+    { "id": "p_home_en", "page_id": "page_home", "language_id": "lang_en", "slug": "", "title": "FachkundePilot", "seo_title": "FachkundePilot | Learn for exam", "seo_description": "Understand in your language. Pass in German.", "og_title": "FachkundePilot", "og_description": "Multilingual prep for the Fachkunde exam.", "content_summary": "Home overview", "is_published": true, "is_complete": true },
+    { "id": "p_home_ar", "page_id": "page_home", "language_id": "lang_ar", "slug": "", "title": "فاخكونده بايلوت", "seo_title": "فاخكونده بايلوت | تعلّم للامتحان", "seo_description": "افهم بلغتك. انجح بالألمانية.", "og_title": "فاخكونده بايلوت", "og_description": "منصة متعددة اللغات للتحضير للامتحان.", "content_summary": "نظرة عامة", "is_published": true, "is_complete": true }
+  ]
+}

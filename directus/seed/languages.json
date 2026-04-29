@@ -1,0 +1,5 @@
+[
+  { "id": "lang_de", "code": "de", "name": "German", "native_name": "Deutsch", "direction": "ltr", "is_default": true, "is_active": true, "sort_order": 1 },
+  { "id": "lang_en", "code": "en", "name": "English", "native_name": "English", "direction": "ltr", "is_default": false, "is_active": true, "sort_order": 2 },
+  { "id": "lang_ar", "code": "ar", "name": "Arabic", "native_name": "العربية", "direction": "rtl", "is_default": false, "is_active": true, "sort_order": 3 }
+]
