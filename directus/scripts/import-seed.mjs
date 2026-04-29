@@ -25,7 +25,13 @@ async function request(baseUrl, token, method, endpoint, body) {
   let json = null;
   try { json = text ? JSON.parse(text) : null; } catch {}
 
-  if (!res.ok) throw new Error(`${method} ${endpoint} failed ${res.status}: ${text}`);
+  if (!res.ok) {
+    const error = new Error(`${method} ${endpoint} failed ${res.status}: ${text}`);
+    error.status = res.status;
+    error.responseText = text;
+    throw error;
+  }
+
   return json;
 }
 
@@ -34,28 +40,59 @@ async function login(baseUrl) {
     email: env('DIRECTUS_ADMIN_EMAIL'),
     password: env('DIRECTUS_ADMIN_PASSWORD')
   });
-  return json.data.access_token;
+
+  const token = json?.data?.access_token;
+  if (!token) throw new Error('No Directus access token returned');
+  return token;
 }
 
 async function readJson(file) {
   return JSON.parse(await fs.readFile(path.resolve(process.cwd(), file), 'utf8'));
 }
 
-async function createItem(baseUrl, token, collection, item) {
+async function upsertItem(baseUrl, token, collection, item) {
+  const label =
+    item.id ??
+    item.code ??
+    item.page_key ??
+    item.category_key ??
+    item.lesson_key ??
+    item.faq_key ??
+    item.plan_key ??
+    'item';
+
+  if (item.id) {
+    try {
+      await request(baseUrl, token, 'PATCH', `/items/${collection}/${encodeURIComponent(item.id)}`, item);
+      console.log(`updated ${collection}: ${label}`);
+      return;
+    } catch (error) {
+      if (error.status !== 404) throw error;
+    }
+  }
+
   try {
     await request(baseUrl, token, 'POST', `/items/${collection}`, item);
-    console.log(`created ${collection}: ${item.id ?? item.code ?? item.page_key ?? item.category_key ?? item.lesson_key ?? item.faq_key ?? item.plan_key ?? 'item'}`);
-  } catch (e) {
-    if (String(e.message).includes('RECORD_NOT_UNIQUE') || String(e.message).includes('duplicate')) {
-      console.log(`exists/skipped ${collection}`);
+    console.log(`created ${collection}: ${label}`);
+  } catch (error) {
+    if (
+      item.id &&
+      (String(error.message).includes('RECORD_NOT_UNIQUE') ||
+        String(error.message).includes('duplicate'))
+    ) {
+      await request(baseUrl, token, 'PATCH', `/items/${collection}/${encodeURIComponent(item.id)}`, item);
+      console.log(`updated ${collection}: ${label}`);
       return;
     }
-    throw e;
+
+    throw error;
   }
 }
 
 async function importArray(baseUrl, token, collection, rows = []) {
-  for (const row of rows) await createItem(baseUrl, token, collection, row);
+  for (const row of rows) {
+    await upsertItem(baseUrl, token, collection, row);
+  }
 }
 
 async function main() {
@@ -72,6 +109,7 @@ async function main() {
   const faqPricing = await readJson('directus/seed/faq_and_pricing.json');
 
   await importArray(baseUrl, token, 'languages', Array.isArray(languages) ? languages : (languages.languages ?? []));
+
   await importArray(baseUrl, token, 'categories', categories.categories ?? []);
   await importArray(baseUrl, token, 'category_translations', categories.category_translations ?? []);
 
@@ -89,7 +127,7 @@ async function main() {
     await importArray(baseUrl, token, collection, rows);
   }
 
-  console.log('\nSeed import completed.');
+  console.log('\nSeed upsert completed.');
 }
 
 main().catch((err) => {
