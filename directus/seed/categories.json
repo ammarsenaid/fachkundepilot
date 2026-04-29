@@ -1,12 +1,120 @@
 {
   "categories": [
-    { "id": "cat_recht", "category_key": "recht", "status": "published", "sort_order": 1, "icon": "scale", "color": "#0B3A75" },
-    { "id": "cat_betrieb", "category_key": "betrieb", "status": "published", "sort_order": 2, "icon": "briefcase", "color": "#0B3A75" },
-    { "id": "cat_rechnen", "category_key": "rechnen", "status": "published", "sort_order": 3, "icon": "calculator", "color": "#F5C84B" }
+    {
+      "id": "cat_recht",
+      "category_key": "recht",
+      "status": "published",
+      "sort_order": 1,
+      "icon": "scale",
+      "color": "#0B3A75"
+    },
+    {
+      "id": "cat_betrieb",
+      "category_key": "betrieb",
+      "status": "published",
+      "sort_order": 2,
+      "icon": "briefcase",
+      "color": "#0B3A75"
+    },
+    {
+      "id": "cat_rechnen",
+      "category_key": "rechnen",
+      "status": "published",
+      "sort_order": 3,
+      "icon": "calculator",
+      "color": "#F5C84B"
+    }
   ],
   "category_translations": [
-    { "id": "cat_tr_recht_de", "category_id": "cat_recht", "language_id": "lang_de", "name": "Recht", "description": "Grundlagen zu Regeln und Pflichten.", "slug": "recht", "is_published": true, "is_complete": true },
-    { "id": "cat_tr_recht_en", "category_id": "cat_recht", "language_id": "lang_en", "name": "Law", "description": "Basics of rules and obligations.", "slug": "law", "is_published": true, "is_complete": true },
-    { "id": "cat_tr_recht_ar", "category_id": "cat_recht", "language_id": "lang_ar", "name": "القانون", "description": "أساسيات القواعد والالتزامات.", "slug": "al-qanun", "is_published": true, "is_complete": true }
+    {
+      "id": "cat_tr_recht_de",
+      "category_id": "cat_recht",
+      "language_id": "lang_de",
+      "name": "Recht im Fahrdienst",
+      "description": "Rechtliche Grundlagen für Taxi- und Mietwagenverkehr: Pflichten, Verantwortung und korrektes Verhalten im Alltag.",
+      "slug": "recht",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "cat_tr_recht_en",
+      "category_id": "cat_recht",
+      "language_id": "lang_en",
+      "name": "Transport Law",
+      "description": "Legal fundamentals for taxi and rental-car transport: duties, responsibility, and compliant daily practice.",
+      "slug": "law",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "cat_tr_recht_ar",
+      "category_id": "cat_recht",
+      "language_id": "lang_ar",
+      "name": "القانون في النقل",
+      "description": "الأساسيات القانونية لنقل التاكسي والمركبات المؤجرة: الواجبات، المسؤولية، والتصرف الصحيح في العمل اليومي.",
+      "slug": "al-qanun",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "cat_tr_betrieb_de",
+      "category_id": "cat_betrieb",
+      "language_id": "lang_de",
+      "name": "Betrieb & Praxis",
+      "description": "So organisierst du den Betrieb professionell: Kundenservice, Abläufe, Dokumentation und Wirtschaftlichkeit.",
+      "slug": "betrieb",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "cat_tr_betrieb_en",
+      "category_id": "cat_betrieb",
+      "language_id": "lang_en",
+      "name": "Operations & Practice",
+      "description": "Run your service professionally: customer communication, daily processes, documentation, and efficiency.",
+      "slug": "operations",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "cat_tr_betrieb_ar",
+      "category_id": "cat_betrieb",
+      "language_id": "lang_ar",
+      "name": "التشغيل والممارسة",
+      "description": "إدارة العمل بشكل مهني: خدمة العملاء، سير العمل اليومي، التوثيق، والكفاءة.",
+      "slug": "operations-ar",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "cat_tr_rechnen_de",
+      "category_id": "cat_rechnen",
+      "language_id": "lang_de",
+      "name": "Rechnen für die Prüfung",
+      "description": "Rechne sicher mit Tarifen, Kosten und Kennzahlen – verständlich erklärt und Schritt für Schritt geübt.",
+      "slug": "rechnen",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "cat_tr_rechnen_en",
+      "category_id": "cat_rechnen",
+      "language_id": "lang_en",
+      "name": "Calculations for the Exam",
+      "description": "Practice fares, costs, and key figures with clear explanations and step-by-step tasks.",
+      "slug": "calculations",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "cat_tr_rechnen_ar",
+      "category_id": "cat_rechnen",
+      "language_id": "lang_ar",
+      "name": "الحسابات للامتحان",
+      "description": "تدرّب على التعرفة والتكاليف والمؤشرات الأساسية بشرح واضح وخطوات عملية.",
+      "slug": "calculations-ar",
+      "is_published": true,
+      "is_complete": true
+    }
   ]
 }

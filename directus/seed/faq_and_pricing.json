@@ -1,22 +1,118 @@
 {
   "faq_items": [
-    { "id": "faq_1", "faq_key": "exam-language", "sort_order": 1, "status": "published" },
-    { "id": "faq_2", "faq_key": "side-by-side", "sort_order": 2, "status": "published" },
-    { "id": "faq_3", "faq_key": "cancel-anytime", "sort_order": 3, "status": "published" }
+    {
+      "id": "faq_1",
+      "faq_key": "exam-language",
+      "sort_order": 1,
+      "status": "published"
+    },
+    {
+      "id": "faq_2",
+      "faq_key": "side-by-side",
+      "sort_order": 2,
+      "status": "published"
+    },
+    {
+      "id": "faq_3",
+      "faq_key": "cancel-anytime",
+      "sort_order": 3,
+      "status": "published"
+    }
   ],
   "faq_translations": [
-    { "id": "faq_1_de", "faq_item_id": "faq_1", "language_id": "lang_de", "question": "In welcher Sprache ist die offizielle Prüfung?", "answer": "Die offizielle Prüfung ist auf Deutsch.", "is_published": true, "is_complete": true },
-    { "id": "faq_2_de", "faq_item_id": "faq_2", "language_id": "lang_de", "question": "Kann ich zweisprachig lernen?", "answer": "Ja, im Lernmodus kannst du zwischen Anzeigearten wechseln.", "is_published": true, "is_complete": true },
-    { "id": "faq_3_de", "faq_item_id": "faq_3", "language_id": "lang_de", "question": "Kann ich später kündigen?", "answer": "Ja, das ist ein Platzhalter und wird später final definiert.", "is_published": true, "is_complete": true }
+    {
+      "id": "faq_1_de",
+      "faq_item_id": "faq_1",
+      "language_id": "lang_de",
+      "question": "Ist FachkundePilot eine offizielle Prüfungsstelle?",
+      "answer": "Nein. FachkundePilot ist eine unabhängige Lern- und Vorbereitungplattform und keine Behörde, IHK oder offizielle Prüfungsstelle.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "faq_2_de",
+      "faq_item_id": "faq_2",
+      "language_id": "lang_de",
+      "question": "Ist die Fachkundeprüfung auf Deutsch?",
+      "answer": "Ja. Die offizielle Prüfung findet auf Deutsch statt. Deshalb trainierst du bei uns gezielt Fachbegriffe und Verständnis in deutscher Prüfungssprache.",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "faq_3_de",
+      "faq_item_id": "faq_3",
+      "language_id": "lang_de",
+      "question": "Kann ich mit Arabisch- oder Englisch-Unterstützung lernen?",
+      "answer": "Ja. Du kannst Inhalte mit Unterstützung in Arabisch oder Englisch verstehen. Für die Prüfung bleibt Deutsch der zentrale Fokus.",
+      "is_published": true,
+      "is_complete": true
+    }
   ],
   "pricing_plans": [
-    { "id": "plan_basic", "plan_key": "basic", "price_monthly": 9.9, "price_yearly": 99, "currency": "EUR", "is_featured": false, "status": "published", "sort_order": 1 },
-    { "id": "plan_plus", "plan_key": "plus", "price_monthly": 14.9, "price_yearly": 149, "currency": "EUR", "is_featured": true, "status": "published", "sort_order": 2 },
-    { "id": "plan_pro", "plan_key": "pro", "price_monthly": 19.9, "price_yearly": 199, "currency": "EUR", "is_featured": false, "status": "published", "sort_order": 3 }
+    {
+      "id": "plan_basic",
+      "plan_key": "basic",
+      "price_monthly": 9.9,
+      "price_yearly": 99,
+      "currency": "EUR",
+      "is_featured": false,
+      "status": "published",
+      "sort_order": 1
+    },
+    {
+      "id": "plan_plus",
+      "plan_key": "plus",
+      "price_monthly": 14.9,
+      "price_yearly": 149,
+      "currency": "EUR",
+      "is_featured": true,
+      "status": "published",
+      "sort_order": 2
+    },
+    {
+      "id": "plan_pro",
+      "plan_key": "pro",
+      "price_monthly": 19.9,
+      "price_yearly": 199,
+      "currency": "EUR",
+      "is_featured": false,
+      "status": "published",
+      "sort_order": 3
+    }
   ],
   "pricing_plan_translations": [
-    { "id": "plan_basic_de", "pricing_plan_id": "plan_basic", "language_id": "lang_de", "name": "Basic", "description": "Einfacher Einstieg mit Kerninhalten.", "features_json": "[\"Lernmodule\",\"FAQ\"]", "cta_text": "Plan wählen", "is_published": true, "is_complete": true },
-    { "id": "plan_plus_de", "pricing_plan_id": "plan_plus", "language_id": "lang_de", "name": "Plus", "description": "Mehr Übungen und mehr Wiederholungen.", "features_json": "[\"Alles aus Basic\",\"Mehr Fragen\",\"Flashcards\"]", "cta_text": "Plan wählen", "is_published": true, "is_complete": true },
-    { "id": "plan_pro_de", "pricing_plan_id": "plan_pro", "language_id": "lang_de", "name": "Pro", "description": "Maximale Vorbereitung mit voller Bibliothek.", "features_json": "[\"Alles aus Plus\",\"PDF Bibliothek\",\"Rechnen intensiv\"]", "cta_text": "Plan wählen", "is_published": true, "is_complete": true }
+    {
+      "id": "plan_basic_de",
+      "pricing_plan_id": "plan_basic",
+      "language_id": "lang_de",
+      "name": "Basic",
+      "description": "Für den klaren Einstieg in Recht, Betrieb und Rechnen. Ideal zum Kennenlernen der Lernmethode.",
+      "features_json": "[\"Grundmodule in allen drei Bereichen\",\"Ausgewählte Übungsfragen\",\"Begriffs- und Wortschatzhilfe\"]",
+      "cta_text": "Kostenlos starten",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "plan_plus_de",
+      "pricing_plan_id": "plan_plus",
+      "language_id": "lang_de",
+      "name": "Plus",
+      "description": "Mehr Tiefe für regelmäßiges Training mit zusätzlichen Übungen und Wiederholungen.",
+      "features_json": "[\"Alles aus Basic\",\"Mehr Fragen und Karteikarten\",\"Zusätzliche Rechenaufgaben mit Lösungen\"]",
+      "cta_text": "Lernmaterial ansehen",
+      "is_published": true,
+      "is_complete": true
+    },
+    {
+      "id": "plan_pro_de",
+      "pricing_plan_id": "plan_pro",
+      "language_id": "lang_de",
+      "name": "Pro",
+      "description": "Umfassende Vorbereitung mit vollem Lernpfad bis zur Probeprüfung.",
+      "features_json": "[\"Alles aus Plus\",\"Strukturierter Lernpfad\",\"Intensive Prüfungsvorbereitung mit Mixed-Übungen\"]",
+      "cta_text": "Prüfung vorbereiten",
+      "is_published": true,
+      "is_complete": true
+    }
   ]
 }
