@@ -168,38 +168,39 @@ export default async function PublicLocalizedPage({ params }: { params: Promise<
   const heroSubheading = heroSection?.subheading || heroSection?.body || pageTranslation?.content_summary || content.intro;
 
   return (
-    <div dir={dir} className="min-h-screen bg-[radial-gradient(110%_60%_at_10%_0%,rgba(12,56,120,0.22),transparent),radial-gradient(90%_50%_at_90%_10%,rgba(244,202,84,0.16),transparent),linear-gradient(180deg,#f8fbff_0%,#eef4ff_35%,#ffffff_80%)] text-slate-800">
+    <div dir={dir} className="min-h-screen bg-[linear-gradient(135deg,#142a5f_0%,#1f4cb9_100%)] text-slate-800">
       <PublicHeader lang={lang} currentPageKey={resolved.key} />
-      <main className="mx-auto max-w-7xl px-4 pb-16 pt-8 md:pt-12">
+      <main className="mx-auto max-w-[1520px] px-4 pb-16 pt-6 md:pt-10">
         {isHome ? (
           <>
-            <section className="grid gap-8 rounded-[2rem] border border-white/70 bg-white/55 p-6 shadow-[0_35px_90px_rgba(15,23,42,0.12)] backdrop-blur-xl md:grid-cols-2 md:gap-12 md:p-12">
+            <section className="grid gap-10 py-10 md:grid-cols-[1.03fr_1fr] md:items-center md:py-14">
               <div>
-                <p className="inline-flex rounded-full border border-[var(--accent)]/40 bg-[var(--accent)]/15 px-4 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--primary)]">FachkundePilot</p>
-                <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-slate-900 md:text-6xl">{heroHeading}</h1>
-                <p className="mt-5 max-w-xl text-base leading-7 text-slate-600 md:text-lg">{heroSubheading}</p>
+                <p className="inline-flex rounded-full bg-[#f4c83b] text-slate-900 px-4 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[var(--primary)]">FachkundePilot</p>
+                <h1 className="mt-6 text-5xl font-extrabold leading-[0.95] tracking-tight text-white md:text-8xl">{heroHeading}</h1>
+                <p className="mt-7 max-w-2xl text-xl leading-10 text-blue-100/90">{heroSubheading}</p>
                 <div className="mt-8 flex flex-wrap gap-3">
-                  <Link href={buildLocalizedPath(lang, "register")} className="rounded-2xl bg-[var(--primary)] px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_36px_rgba(11,58,117,0.35)] transition hover:-translate-y-0.5">{labels.primaryCta}</Link>
-                  <Link href={buildLocalizedPath(lang, "materials")} className="rounded-2xl border border-slate-200 bg-white/95 px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:bg-white">{labels.secondaryCta}</Link>
+                  <Link href={buildLocalizedPath(lang, "register")} className="rounded-2xl bg-[#f4c83b] text-slate-900 px-6 py-3 text-sm font-semibold shadow-[0_14px_36px_rgba(11,58,117,0.35)] transition hover:-translate-y-0.5">{labels.primaryCta}</Link>
+                  <Link href={buildLocalizedPath(lang, "materials")} className="rounded-2xl border border-blue-300/40 bg-transparent text-white px-6 py-3 text-sm font-semibold shadow-sm transition hover:bg-white">{labels.secondaryCta}</Link>
                 </div>
+                <p className="mt-6 text-sm text-blue-200">Die offizielle Prüfung findet auf Deutsch statt. Übersetzungen helfen beim Verständnis.</p>
               </div>
-              <aside className="rounded-3xl border border-white/80 bg-slate-950 p-5 text-white shadow-2xl md:p-6">
-                <p className="text-xs uppercase tracking-[0.14em] text-slate-300">{labels.dashboardTag}</p>
+              <aside className="relative rounded-[1.8rem] border border-slate-300 bg-[#f1f1f1] p-6 text-slate-900 shadow-2xl md:p-7">
+                <p className="text-xs uppercase tracking-[0.14em] text-slate-500">{labels.dashboardTag}</p>
                 <h2 className="mt-3 text-2xl font-semibold">{labels.dashboardTitle}</h2>
                 <div className="mt-6 space-y-3">
                   {labels.dashboardItems.map((item, index) => (
-                    <div key={item} className="flex items-center justify-between rounded-2xl bg-white/10 px-4 py-3">
+                    <div key={item} className="flex items-center justify-between rounded-2xl border border-slate-300 bg-white px-4 py-3">
                       <p className="text-sm">{item}</p>
-                      <span className="text-xs text-amber-300">{20 + index * 20}%</span>
+                      <span className="text-xs text-slate-500">{20 + index * 20}%</span>
                     </div>
                   ))}
                 </div>
               </aside>
             </section>
 
-            <section className="mt-6 grid gap-3 rounded-3xl border border-white/70 bg-white/80 p-4 shadow-sm md:grid-cols-3 md:p-5">
+            <section className="mt-2 grid gap-3 rounded-3xl border border-white/20 bg-white/10 p-4 text-white md:grid-cols-3 md:p-5">
               {labels.trustItems.map((item) => (
-                <p key={item} className="rounded-2xl bg-slate-50 px-4 py-3 text-center text-sm font-medium text-slate-700">{item}</p>
+                <p key={item} className="rounded-2xl bg-white/10 px-4 py-3 text-center text-sm font-medium text-white">{item}</p>
               ))}
             </section>
 
